@@ -1,0 +1,6 @@
+datapath <- Sys.getenv("MGMTPLANE_DATA")
+stopifnot(datapath != "")
+stopifnot(outfile != "")
+fullpath <- paste(datapath,outfile,sep="/")
+write.table(binned, fullpath, sep=",", row.names=FALSE, quote=FALSE, na="")
+cat(paste("Wrote data from 'binned' into '",fullpath,"'\n", sep=""))
